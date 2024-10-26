@@ -117,3 +117,15 @@ var join = function(arr1, arr2) {
  ]
  const resulty =join(arr1,arr2)
  console.log(resulty)
+
+ //58. Length of Last Word
+ var lengthOfLastWord = function(s) {
+  const result=s.trim().split(' ')
+  const lastitem=result.at(-1)
+  return lastitem.length
+};
+
+const s = "Hello World   "
+
+const res=lengthOfLastWord(s)
+console.log(res)

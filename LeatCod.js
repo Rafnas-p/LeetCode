@@ -129,3 +129,20 @@ const s = "Hello World   "
 
 const res=lengthOfLastWord(s)
 console.log(res)
+
+//66. Plus One
+function ab(arr){
+  for (let i=arr.length-1;1>=0;i--){
+      if(arr[i]===9){
+          arr[i]=0
+      }else{
+          arr[i]++
+          return arr
+      }
+  }
+   arr.unshift(1)
+  return arr
+}
+const arr=[1,2,9]
+const ans=ab(arr)
+console.log(ans)

@@ -146,3 +146,33 @@ function ab(arr){
 const arr=[1,2,9]
 const ans=ab(arr)
 console.log(ans)
+//genaret paranthises
+var generateParenthesis = function(n) {
+    
+  let output = [];
+
+  function generate(a = [], left = 0, right = 0) {
+      if (a.length === 2 * n) {
+          output.push(a.join(''));
+          return;
+      }
+
+      if (left < n) {
+          a.push('(');
+          generate(a, left + 1, right);
+          a.pop();
+      }
+
+      if (right < left) {
+          a.push(')');
+          generate(a, left, right + 1);
+          a.pop();
+      }
+  }
+
+  generate();
+  return output;
+};
+
+
+console.log(generateParenthesis(3));
